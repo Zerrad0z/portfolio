@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oussama Zerrad — Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <canvas id="bg"></canvas>
+    <div class="scan"></div>
+    <div class="holodeck-grid"></div>
+    <div class="cyberpunk-scanlines" id="scanlines"></div>
+
+    <!-- AI Consciousness Indicator -->
+    <div class="ai-consciousness" id="aiConsciousness" title="Click to activate AI mode">
+        <i class="fas fa-brain"></i>
+    </div>
+
+    <!-- Portal Effect -->
+    <div class="portal" id="portal"></div>
+
+    <!-- Neural Network Overlay -->
+    <div id="neuralNetwork"></div>
+
+    <!-- Header -->
+    <header class="reveal text-center py-5">
+        <div class="container">
+            <span class="badge mb-3">
+                <i class="fas fa-code me-2"></i>
+                Portfolio
+            </span>
+            <h1 class="display-1 mb-4">OUSSAMA ZERRAD</h1>
+            <p class="tagline lead mb-4">
+                Full-Stack Software Engineer specializing in <strong>Java/Spring Boot, Angular and React</strong>, 
+                API platforms, and modern web applications. Building scalable backends, intuitive frontends, 
+                and exploring <strong>AI-enhanced automation</strong>.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a class="cta btn" href="#projects">
+                    <i class="fas fa-rocket me-2"></i>
+                    View Projects
+                </a>
+                <a class="cta btn btn-outline" href="mailto:zedussama@gmail.com">
+                    <i class="fas fa-envelope me-2"></i>
+                    Email Me
+                </a>
+                <a class="cta btn btn-outline" href="https://www.linkedin.com/in/oussama-zerrad/" target="_blank">
+                    <i class="fab fa-linkedin me-2"></i>
+                    LinkedIn
+                </a>
+                <a class="cta btn btn-outline" href="https://github.com/Zerrad0z" target="_blank">
+                    <i class="fab fa-github me-2"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        
+        <!-- About + Skills -->
+        <section class="reveal mb-5">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-user-astronaut me-2"></i>
+                        [ ABOUT + SKILL TREE ]
+                    </h2>
+                    <span class="badge featured">
+                        <i class="fas fa-id-badge me-1"></i>
+                        Who I am
+                    </span>
+                </div>
+                <div class="section-body">
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <p class="mb-3">
+                                Master's in Software Engineering with a passion for building robust, scalable systems. 
+                                Currently focused on <strong>Spring Boot</strong>, API platform development, 
+                                and exploring <strong>AI-enhanced automation</strong> using Spring AI and intelligent agents.
+                            </p>
+                            <p class="mb-3">
+                                Recent highlights include developing an <strong>API Platform for ONCF</strong>, implementing <strong>AI-driven field data analysis systems</strong>, and contributing 
+                                to enterprise-level applications during internships at <strong>3M</strong> and <strong>ONCF</strong>.
+                            </p>
+                            <p class="mb-0">
+                                Beyond enterprise development, I enjoy prototyping <strong>2D exploration games</strong> and 
+                                experimenting with creative coding to keep the spark of innovation alive.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="skills d-flex flex-wrap gap-2">
+                                <span class="chip chip-primary">
+                                    <i class="fab fa-java me-1"></i>
+                                    Java • Spring Boot
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-brain me-1"></i>
+                                    Spring AI • Ollama
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-cloud me-1"></i>
+                                    Spring Cloud • Eureka
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-shield-alt me-1"></i>
+                                    Circuit Breakers
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-plug me-1"></i>
+                                    REST APIs • JWT
+                                </span>
+                                <span class="chip">
+                                    <i class="fab fa-angular me-1"></i>
+                                    Angular • React
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-desktop me-1"></i>
+                                    JavaFX • Swing
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-gamepad me-1"></i>
+                                    Phaser.js • Godot
+                                </span>
+                                <span class="chip">
+                                    <i class="fab fa-docker me-1"></i>
+                                    Docker • Kubernetes
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-cogs me-1"></i>
+                                    Jenkins • CI/CD
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-database me-1"></i>
+                                    PostgreSQL • Oracle
+                                </span>
+                                <span class="chip">
+                                    <i class="fas fa-vial me-1"></i>
+                                    JUnit • Testing
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="reveal mb-5">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-chart-line me-2"></i>
+                        [ CASE STUDIES ]
+                    </h2>
+                    <span class="badge featured">
+                        <i class="fas fa-target me-1"></i>
+                        Impact over tasks
+                    </span>
+                </div>
+                <div class="section-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>
+                                <i class="fas fa-robot text-warning me-2"></i>
+                                ONCF AI-Enhanced Legacy System Modernization
+                            </h3>
+                            <small class="text-muted d-block mb-2">
+                                <i class="fas fa-tools me-1"></i>
+                                Spring Boot • Spring AI • Ollama • Oracle • Docker • JWT
+                            </small>
+                            <p>
+                                Leading the modernization of a critical legacy system for field data collection and analysis. 
+                                Implementing intelligent agents inspired by the MCP (Model Context Protocol) concept to automate 
+                                repetitive tasks, alongside comprehensive data traceability, advanced analytics, and an intuitive 
+                                user interface adapted to business workflows.
+                            </p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3>
+                                <i class="fas fa-ticket-alt text-primary me-2"></i>
+                                Enterprise IT Ticketing System
+                            </h3>
+                            <small class="text-muted d-block mb-2">
+                                <i class="fas fa-tools me-1"></i>
+                                Spring Boot • JavaFX • Oracle • Docker • JUnit
+                            </small>
+                            <p>
+                                Architected and developed a complete ticket management system for IT support in industrial 
+                                environments. Built RESTful APIs with comprehensive Swagger documentation, implemented 
+                                role-based access control, and created an intuitive JavaFX interface. Achieved 100% test 
+                                coverage and containerized deployment.
+                            </p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3>
+                                <i class="fas fa-network-wired text-success me-2"></i>
+                                ONCF API Integration Platform
+                            </h3>
+                            <small class="text-muted d-block mb-2">
+                                <i class="fas fa-tools me-1"></i>
+                                Spring Boot • Angular • Spring Security • Oracle • Microservices
+                            </small>
+                            <p>
+                                Designed and implemented a centralized API platform for ERP system integration, featuring 
+                                multi-level authentication, real-time notifications, comprehensive API cataloging, and usage 
+                                analytics. Successfully reduced integration complexity and enabled faster cross-departmental 
+                                data exchange.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="reveal mb-5">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-laptop-code me-2"></i>
+                        [ FEATURED PROJECTS ]
+                    </h2>
+                    <span class="badge featured">
+                        <i class="fas fa-star me-1"></i>
+                        Latest Work
+                    </span>
+                </div>
+                <div class="section-body">
+                    <div class="row g-4">
+                        
+                        <!-- ONCF AI System -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card featured reality-warp" data-tech="ai">
+                                <h3>
+                                    <i class="fas fa-brain text-warning me-2"></i>
+                                    ONCF AI-Enhanced System
+                                </h3>
+                                <p>
+                                    Modernizing legacy field data systems with AI automation, intelligent agents, and 
+                                    comprehensive analytics for the National Railway Office.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Java 17</span>
+                                    <span class="tech">Spring Boot</span>
+                                    <span class="tech">Spring AI</span>
+                                    <span class="tech">Ollama</span>
+                                    <span class="tech">Oracle</span>
+                                    <span class="tech">Docker</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-robot me-1"></i>
+                                        AI-Powered
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Mar 2025 - Jul 2025
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-building me-1"></i>
+                                        Enterprise
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- IT Ticketing System -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card reality-warp">
+                                <h3>
+                                    <i class="fas fa-ticket-alt text-primary me-2"></i>
+                                    IT Ticketing System
+                                </h3>
+                                <p>
+                                    Full-stack ticket management application with RESTful APIs, role-based access control, 
+                                    and comprehensive audit system for CNC workshop IT support.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Java 17</span>
+                                    <span class="tech">Spring Boot</span>
+                                    <span class="tech">JavaFX</span>
+                                    <span class="tech">Oracle SQL</span>
+                                    <span class="tech">Docker</span>
+                                    <span class="tech">JUnit</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-cogs me-1"></i>
+                                        Ticketing
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Nov 2024 - Feb 2025
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-industry me-1"></i>
+                                        Industrial
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- API Platform -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card reality-warp">
+                                <h3>
+                                    <i class="fas fa-network-wired text-success me-2"></i>
+                                    API Integration Platform
+                                </h3>
+                                <p>
+                                    Centralized platform for ERP system integration with 
+                                    real-time notifications, and comprehensive API management.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Spring Boot</span>
+                                    <span class="tech">Angular 17</span>
+                                    <span class="tech">Spring Security</span>
+                                    <span class="tech">Oracle</span>
+                                    <span class="tech">JWT</span>
+                                    <span class="tech">Docker</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-plug me-1"></i>
+                                        API Platform
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Feb 2024 - Sep 2024
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-train me-1"></i>
+                                        Railway
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3M Inventory -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card reality-warp">
+                                <h3>
+                                    <i class="fas fa-boxes text-info me-2"></i>
+                                    3M Inventory System
+                                </h3>
+                                <p>
+                                    Complete web application for real-time inventory control with robust authentication, 
+                                    role-based access, and comprehensive product tracking capabilities.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Java/JEE</span>
+                                    <span class="tech">React</span>
+                                    <span class="tech">Bootstrap</span>
+                                    <span class="tech">Hibernate</span>
+                                    <span class="tech">SQL</span>
+                                    <span class="tech">JWT</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-warehouse me-1"></i>
+                                        Inventory
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Jan 2021 - Mar 2021
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-building me-1"></i>
+                                        3M PRECISION
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Game Development -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card reality-warp">
+                                <h3>
+                                    <i class="fas fa-gamepad text-danger me-2"></i>
+                                    2D Exploration Games
+                                </h3>
+                                <p>
+                                    Minimalist metroidvania mechanics with environmental storytelling, item-gated progression, 
+                                    and polished gameplay loops suitable for small development teams.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Phaser.js</span>
+                                    <span class="tech">Godot</span>
+                                    <span class="tech">GML</span>
+                                    <span class="tech">JavaScript</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-joystick me-1"></i>
+                                        Game Dev
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-palette me-1"></i>
+                                        Creative
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-infinity me-1"></i>
+                                        Ongoing
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Microservices Lab -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card reality-warp">
+                                <h3>
+                                    <i class="fas fa-robot text-warning me-2"></i>
+                                    AI & Intelligent Systems Lab
+                                </h3>
+                                <p>
+                                    Experimental project exploring Spring AI ecosystem with MCP (Model Context Protocol), AI Agents, RAG, 
+                                    and LLMs like Ollama.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="tech">Spring AI</span>
+                                    <span class="tech">MCP</span>
+                                    <span class="tech">AI Agent</span>
+                                    <span class="tech">RAG</span>
+                                    <span class="tech">Ollama</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="pill">
+                                        <i class="fas fa-flask me-1"></i>
+                                        Experimental
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-book me-1"></i>
+                                        Learning
+                                    </span>
+                                    <span class="pill">
+                                        <i class="fas fa-microscope me-1"></i>
+                                        R&D
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-muted">
+                            Each project represents a commitment to <strong>clean architecture</strong>, comprehensive testing, 
+                            and production-ready deployment.<br>
+                            <strong>Available for freelance</strong> and full-time opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="reveal mb-5">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-handshake me-2"></i>
+                        [ CONTACT ]
+                    </h2>
+                    <span class="badge featured">
+                        <i class="fas fa-rocket me-1"></i>
+                        Let's build together
+                    </span>
+                </div>
+                <div class="section-body">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <p class="mb-3">
+                                Currently <strong>open to full-time roles</strong>, freelance projects, and technical collaborations. 
+                                Particularly interested in Spring Boot microservices, AI integration, and API platform development.
+                            </p>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-bolt text-warning me-2"></i>
+                                Fastest response: LinkedIn DM • Email • GitHub Issues
+                            </p>
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>Available for immediate start</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-card holo-effect">
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:zedussama@gmail.com">zedussama@gmail.com</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <a href="tel:+212691668393">+212 6 91 66 83 93</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fab fa-linkedin"></i>
+                                        <a href="https://www.linkedin.com/in/oussama-zerrad/" target="_blank">
+                                            linkedin.com/in/oussama-zerrad
+                                        </a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fab fa-github"></i>
+                                        <a href="https://github.com/Zerrad0z" target="_blank">
+                                            github.com/Zerrad0z
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Download Section -->
+                    <div class="cv-download-section">
+                        <div class="cv-info">
+                            <h4>
+                                <i class="fas fa-file-download me-2"></i>
+                                Download My Resume
+                            </h4>
+                            <p>Get my complete professional profile in your preferred language</p>
+                        </div>
+                        <div class="cv-buttons">
+                            <a href="./res/CV_Oussama_Zerrad_EN.pdf" download="CV_Oussama_Zerrad_EN.pdf" class="cta btn-cv">
+                                <i class="fas fa-download me-2"></i>
+                                Download CV (English)
+                            </a>
+                            <a href="./res/CV_Oussama_Zerrad_FR.pdf" download="CV_Oussama_Zerrad_FR.pdf" class="cta btn-cv fr">
+                                <i class="fas fa-download me-2"></i>
+                                Télécharger CV (Français)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="reveal text-center py-4 border-top">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                <i class="fas fa-code text-warning"></i>
+                <span>© <span id="year"></span> Oussama Zerrad</span>
+                <i class="fas fa-heart text-danger"></i>
+            </div>
+            <p class="mb-0 text-muted">Crafted with HTML, CSS, JS, and a passion for clean code ✨</p>
+        </div>
+    </footer>
+
+    <!-- Easter Egg: Konami Code -->
+    <div id="konami-message" class="position-fixed top-50 start-50 translate-middle p-4 bg-dark border border-warning rounded" style="display:none; z-index:1000;">
+        <div class="text-center">
+            <h3 class="text-warning mb-3">🎮 DEVELOPER MODE ACTIVATED!</h3>
+            <p class="text-light mb-3">You found the easter egg! Here's a secret: I love building things that surprise and delight users.</p>
+            <button onclick="closeKonami()" class="btn btn-warning">Close</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
