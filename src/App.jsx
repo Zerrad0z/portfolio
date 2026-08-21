@@ -572,7 +572,7 @@ export default function Portfolio() {
               ["FRAMEWORKS", "Spring Boot, React, Angular, JavaFX"],
               ["DATABASES", "PostgreSQL, Oracle, MySQL, MongoDB, SQL Server"],
               ["TOOLS", "Docker, Git, Jenkins, SonarQube, Postman, Maven"],
-              ["METHOD", "Agile/Scrum, UML, Merise, JWT/OAuth"],
+              ["METHOD", "Agile/Scrum, UML, Merise"],
             ].map(([h, p], i) => (
               <Reveal key={h} delay={i * 40}>
                 <div style={{ background: C.paper, padding: "16px 14px", height: "100%" }}>
