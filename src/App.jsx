@@ -125,6 +125,45 @@ function SocialBadge({ label, title, href, size = 42 }) {
   );
 }
 
+function TopbarSocialIcon({ type, title, href }) {
+  const [hover, setHover] = useState(false);
+  const paths = {
+    github:
+      "M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.75c-2.78.62-3.37-1.37-3.37-1.37-.45-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.32 9.32 0 0 1 12 6.94c.85 0 1.7.12 2.5.35 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.95.68 1.91v2.83c0 .28.18.6.69.5A10.12 10.12 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z",
+    linkedin:
+      "M6.94 8.85H3.75V20h3.19V8.85ZM5.35 7.32c1.02 0 1.85-.84 1.85-1.86A1.85 1.85 0 1 0 5.35 7.32ZM20.25 20h-3.18v-5.42c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.41-2.08 2.86V20H10V8.85h3.06v1.52h.04c.43-.81 1.47-1.67 3.03-1.67 3.24 0 3.84 2.13 3.84 4.9V20h.28Z",
+  };
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      title={title}
+      aria-label={title}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        width: 36,
+        height: 36,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: C.paper,
+        border: `1px solid ${hover ? C.ribbon : C.lineInk}`,
+        background: hover ? "rgba(237,238,227,0.06)" : "transparent",
+        transition: "border-color .15s, background .15s, transform .15s",
+        transform: hover ? "translateY(-1px)" : "none",
+        flexShrink: 0,
+      }}
+    >
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d={paths[type]} />
+      </svg>
+    </a>
+  );
+}
+
 function VisitorCounter() {
   const [isLocal, setIsLocal] = useState(true);
 
@@ -488,8 +527,8 @@ export default function Portfolio() {
             </div>
             <VisitorCounter />
             <div style={{ display: "flex", gap: 2 }}>
-              <SocialBadge label="GH" title="GitHub" href="https://github.com/Zerrad0z" size={36} />
-              <SocialBadge label="IN" title="LinkedIn" href="https://linkedin.com/in/oussama-zerrad/" size={36} />
+              <TopbarSocialIcon type="github" title="GitHub" href="https://github.com/Zerrad0z" />
+              <TopbarSocialIcon type="linkedin" title="LinkedIn" href="https://linkedin.com/in/oussama-zerrad/" />
             </div>
           </div>
         </div>
@@ -521,11 +560,8 @@ export default function Portfolio() {
             <Reveal delay={240}>
               <div style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}>
                 <a href="mailto:zedussama@gmail.com" className="mono" style={{ fontSize: 12, padding: "12px 20px", background: C.ink, color: C.paper, border: `1.5px solid ${C.ink}` }}>→ EMAIL ME</a>
-                <a href="https://linkedin.com/in/oussama-zerrad/" target="_blank" rel="noreferrer" className="mono" style={{ fontSize: 12, padding: "12px 20px", border: `1.5px solid ${C.ink}` }}>CONNECT ON LINKEDIN</a>
                 <div style={{ display: "flex", gap: 4, marginLeft: 4 }}>
-                  <SocialBadge label="GH" title="GitHub" href="https://github.com/Zerrad0z" size={40} />
-                  <SocialBadge label="IN" title="LinkedIn" href="https://linkedin.com/in/oussama-zerrad/" size={40} />
-                </div>
+                   </div>
               </div>
             </Reveal>
             <Reveal delay={320}>
