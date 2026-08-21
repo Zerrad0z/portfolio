@@ -136,10 +136,7 @@ function VisitorCounter() {
     "https://hits.sh/zerrad0z.github.io/portfolio.svg?view=today-total&style=flat-square&label=VISITS&color=C1442B&labelColor=17180F";
 
   return (
-    <a
-      href="https://hits.sh/zerrad0z.github.io/portfolio/"
-      target="_blank"
-      rel="noreferrer"
+    <div
       title="Portfolio visitor counter"
       className="mono"
       style={{
@@ -165,7 +162,7 @@ function VisitorCounter() {
           style={{ display: "block", height: 20, maxWidth: 150 }}
         />
       )}
-    </a>
+    </div>
   );
 }
 
