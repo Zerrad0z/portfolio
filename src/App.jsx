@@ -70,6 +70,7 @@ const ICONS = {
   layers: "M12 3 L21 8 L12 13 L3 8 Z M3 13 L12 18 L21 13 M3 17.5 L12 22 L21 17.5",
   terminal: "M3 5 H21 V19 H3 Z M6 9 L10 12 L6 15 M12 16 H17",
   send: "M21 3 L11 13 M21 3 L14.5 21 L11 13 L3 9.5 Z",
+  eye: "M2.5 12 C5.5 6.5 18.5 6.5 21.5 12 C18.5 17.5 5.5 17.5 2.5 12 Z M12 9 A3 3 0 1 1 12 15 A3 3 0 0 1 12 9 Z",
 };
 
 /* ---------------- social badge (wired ring + initials) ---------------- */
@@ -120,6 +121,50 @@ function SocialBadge({ label, title, href, size = 42 }) {
         />
       </svg>
       <span style={{ position: "relative", zIndex: 1 }}>{label}</span>
+    </a>
+  );
+}
+
+function VisitorCounter() {
+  const [isLocal, setIsLocal] = useState(true);
+
+  useEffect(() => {
+    setIsLocal(["localhost", "127.0.0.1", ""].includes(window.location.hostname));
+  }, []);
+
+  const counterUrl =
+    "https://hits.sh/zerrad0z.github.io/portfolio.svg?view=today-total&style=flat-square&label=VISITS&color=C1442B&labelColor=17180F";
+
+  return (
+    <a
+      href="https://hits.sh/zerrad0z.github.io/portfolio/"
+      target="_blank"
+      rel="noreferrer"
+      title="Portfolio visitor counter"
+      className="mono"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        minHeight: 28,
+        padding: "4px 8px",
+        color: C.paper,
+        border: `1px solid ${C.lineInk}`,
+        textDecoration: "none",
+        flexShrink: 0,
+      }}
+    >
+      <WiredIcon d={ICONS.eye} active size={18} color={C.ribbon} />
+      {isLocal ? (
+        <span style={{ fontSize: 10, letterSpacing: 1 }}>VISITS LOCAL</span>
+      ) : (
+        <img
+          src={counterUrl}
+          alt="Portfolio visitor count"
+          loading="lazy"
+          style={{ display: "block", height: 20, maxWidth: 150 }}
+        />
+      )}
     </a>
   );
 }
@@ -444,6 +489,7 @@ export default function Portfolio() {
               <span style={{ width: 7, height: 7, borderRadius: "50%", background: C.signal, boxShadow: `0 0 6px ${C.signal}`, animation: "pulse 1.8s ease-in-out infinite" }} />
               OPEN_TO_WORK
             </div>
+            <VisitorCounter />
             <div style={{ display: "flex", gap: 2 }}>
               <SocialBadge label="GH" title="GitHub" href="https://github.com/Zerrad0z" size={36} />
               <SocialBadge label="IN" title="LinkedIn" href="https://linkedin.com/in/oussama-zerrad/" size={36} />
